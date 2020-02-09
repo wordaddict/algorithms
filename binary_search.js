@@ -131,6 +131,16 @@ class BST {
         return this.root;
     }
 
+    maxDepth(node){
+        if(node === null){
+           return 0
+        } else {
+            let leftHeight = this.maxDepth(node.left);
+            let rightHeight = this.maxDepth(node.right);
+            return Math.max(leftHeight, rightHeight) + 1
+        }
+    }
+
     search(node, data){
         if(node === null){
             return null
@@ -147,17 +157,20 @@ class BST {
 }
 
 const bst = new BST();
+// const node = new Node(12)
 bst.insert(15);
 bst.insert(25);
 bst.insert(12);
 bst.insert(10);
+bst.insert(4);
+bst.insert(14);
 // console.log('bst', bst)
 
 const root = bst.getRootNode();
 // console.log('root', root)
 
-bst.inorder(root);
-console.log('inorder', bst)
+// bst.inorder(root);
+console.log('max', bst.maxDepth(root))
 
 // const preorder = bst.inorder(root);
 // console.log('preorder', preorder)

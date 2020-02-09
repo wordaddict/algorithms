@@ -131,6 +131,11 @@ class BST {
         return this.root;
     }
 
+    // Time complexity
+    //0(N)
+    //space complexity
+    // worst case, tree is completly unbalanced so O(N)
+    // best case completely balanced O(logN)
     maxDepth(node){
         if(node === null){
            return 0

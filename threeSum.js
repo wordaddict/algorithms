@@ -28,4 +28,3 @@ var threeSum_Brute = function(nums) {
   
   console.log(threeSum_Brute([-1, 0, 1, 2, -1, -4]));
   // Will output - [[-1, 0, 1], [-1, -1, 2]]
-   

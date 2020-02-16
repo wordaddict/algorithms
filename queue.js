@@ -33,10 +33,16 @@ class Queue {
         return this.queue;
     }
 
+    isEmpty(){
+        return this.queue.length === 0 ? true : false;
+    }
+
     size(){
         return this.queue.length;
     }
 }
+
+module.exports = Queue
 
 const q = new Queue();
 q.enqueue(10)

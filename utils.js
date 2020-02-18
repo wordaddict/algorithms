@@ -9,3 +9,7 @@ const maxSecondValue = (array) => {
 
 const val = maxSecondValue([1, 12, 15, 65, 7])
 console.log('val', [1, 2].concat([3, 4]))
+
+const reverseWords = () => {
+    
+}

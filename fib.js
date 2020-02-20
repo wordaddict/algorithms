@@ -39,4 +39,5 @@ const fibBottomUp = (n) => {
 }
 
 console.log(fibBottomUp(6));
+"yes".charCodeAt
 

@@ -1,5 +1,5 @@
 // Depth first search
-const Queue = require('./queue');
+const Queue = require('../queue');
 const island = (grid) => {
     const nr = grid.length;
     const nc = grid[0].length;

@@ -43,19 +43,19 @@ const isl = (grid) => {
         for (let c = 0; c < grid[0].length; c++){
             if(grid[r][c] == '1'){
                 islands ++;
-                const neighbors = new Queue();
+                const neighbors = new Queue() || [];
                 neighbors.enqueue(r * nc + c);
                 while (!neighbors.isEmpty()){
                     const id = neighbors.dequeue();
                     let row = id / nc;
                     let col = id % nc
                     if (row - 1 >= 0 && grid[row-1][col] == '1') {
-                        neighbors.enqueue((row-1) * nc + col);
+                        neighbors.enqueue((row-1) * nc + col) || neighbors.push((row-1) * nc + col);
                         grid[row-1][col] = '0';
                       }
                       console.log('row', row)
                       if (row + 1 < nr && grid[row+1][col] == '1') {
-                        neighbors.enqueue((row+1) * nc + col);
+                        neighbors.enqueue((row+1) * nc + col) || neighbors.push((row+1) * nc + col);
                         grid[row+1][col] = '0';
                       }
                       if (col - 1 >= 0 && grid[row][col-1] == '1') {

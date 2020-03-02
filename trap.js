@@ -19,4 +19,5 @@ const trap = (arr) => {
     return water;
 };
 
-trap(data)
+const yes = trap(data);
+console.log('yes', yes)

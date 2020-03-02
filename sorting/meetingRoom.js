@@ -8,7 +8,6 @@ var minMeetingRooms = function(intervals) {
        let remainingMeetings = [];
        let prevEnd = intervals.shift()[1];
        rooms++;
-       
        for (let [start,end] of intervals) {
            // If meeting has conflict with previous meeting,
            // then add it to another conference room

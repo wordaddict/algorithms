@@ -1,3 +1,10 @@
+class ListNode {
+    constructor(val, next = null){
+        this.val = val;
+        this.next = next;
+    }
+}
+
 var addTwoNumbers = function(l1, l2) {
     let l3 = new ListNode(0);
     let carry = 0;

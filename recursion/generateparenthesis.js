@@ -17,3 +17,5 @@ const generateParenthesis = (n) => {
         }
     }
 }
+
+console.log('solution', generateParenthesis(2))

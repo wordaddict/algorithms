@@ -1,5 +1,5 @@
 var copyRandomList = function(head) {
-    if (! head) return head;
+    if (!head) return head;
     
     var cur = head;
     

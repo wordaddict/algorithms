@@ -1,10 +1,21 @@
-const getTensWord = tens => ['','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'][tens];
-const getUnderTwentyWord = num => ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'][num];
+//const getTensWord = tens => ['','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'][tens];
+// const getUnderTwentyWord = num => ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'][num];
+
+const getTensWord = (num) => {
+    const arr =  ['','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety']
+    return arr[num];
+};
+
+const getUnderTwentyWord = (num) => {
+    const arr = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
+    return arr[num];
+}
 
 var numberToWords = function(num) {
     if (num < 20) return getUnderTwentyWord(num);
     
     let billions = Math.floor(num / Math.pow(10,9));
+    console.log('billions', billions, Math.pow(10,9))
     let millions = Math.floor((num - billions * Math.pow(10,9)) / Math.pow(10,6));
     let thousands = Math.floor((num - billions * Math.pow(10,9) - millions * Math.pow(10,6)) / 1000);
     let hundreds = Math.floor((num - billions * Math.pow(10,9) - millions * Math.pow(10,6) - thousands * 1000)/ 100);
@@ -21,3 +32,5 @@ var numberToWords = function(num) {
     
     return str;
 };
+
+console.log('guy', numberToWords(1234))

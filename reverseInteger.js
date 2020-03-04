@@ -14,3 +14,5 @@ const reverse  = (x) => {
         rev = rev * 10 + pop;
     }
 }
+
+console.log('guy', reverse(-23))

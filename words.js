@@ -36,7 +36,7 @@ function isComposedBy(word, set){
     if (wordSet.has("")) wordSet.delete("");
     let result = [];
     words.forEach(word => {
-        return isComposedBy(word, wordSet)
+      isComposedBy(word, wordSet)
       if (word.length > 0 && isComposedBy(word, wordSet)) 
         result.push(word);
     });

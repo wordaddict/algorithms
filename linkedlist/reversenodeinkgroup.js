@@ -5,6 +5,8 @@
  *     this.next = null;
  * }
  */
+
+ // write this guy
 /**
  * @param {ListNode} head
  * @param {number} k
@@ -37,3 +39,25 @@ var reverseKGroup = function(head, k) {
    
    return node.next
 };
+
+// Using recursion
+const reverseKGroup = (head, k) => {
+    let current = head;
+    let next = null;
+    let prev = null;
+    let count = 0;
+    while(count < k && current !== null){
+        // save next
+        next = current.next;
+        // make next be null
+        current.next = prev;
+        prev = next;
+        current = next;
+    };
+
+    if(next !== null){
+        head.next = reverseKGroup(next, k)
+    };
+
+    return prev;
+}

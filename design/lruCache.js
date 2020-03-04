@@ -1,3 +1,4 @@
+// Linked list
 class Node {
     constructor(key, value, next = null, prev = null){
         this.key = key;
@@ -6,6 +7,8 @@ class Node {
         this.prev = prev
     }
 };
+
+// least recently used cache
 
 class LRU {
     // set default rate limit to 10 if not passed
